@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt0br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <header class="cabecalho"> <!-- rever essa estrutura -->
+        <h1>Inscrição - Dicas RJ</h1>
+            <div class="cabecalho-menu-icoes-img">
+                <span class="material-symbols-outlined dark-icone">dark_mode</span>
+                <span class="material-symbols-outlined add-icone">add</span>
+            </div>
+        <div class="menu-dropDown">
+            <ul>
+                <li>Zona Norte</li>
+                <li>Zona Sul</li>
+                <li>Zona Oeste</li>
+            </ul>
+        </div>
+
+            <p>Faça já sua inscrição e receba toda sexta-feira dicas personalizadas do que fazer no final de semana na Cidade Maravilhosa!</p>
+
+        
+      <!-- pode ser uma newsletter ou pode ser um calculo do algoritimo dependendo da resposta da pessoa - como um site/app de busca -->
+    </header>
+
+    <main> 
+        <form action="" method="get">
+            <label for="inome">Nome:
+                <input type="text" name="Nome" id="inome">
+            </label>
+
+            <legend>Sexo:</legend>
+            <div class="form-sexo-conteiner">
+               
+                <div class="form-sexo"><label for="ifem">Feminino</label><input type="radio" name="sexo" id="ifem"></div>
+                <div class="form-sexo"><label for="imas">Masculino</label><input type="radio" name="sexo" id="imas"></div>
+            </div>
+
+            <label for="iemail">Email:
+                <input type="email" name="Email" id="iemail">
+            </label>
+
+            <label for="iregiao">Lugar:</label>
+            <select name="regiao" id="iregiao">
+            <option value="" selected>Selecione aqui sua região</option>
+
+            <optgroup label="Rio de Janeiro">
+                <option value="ZO" id="ZO">Zona Oeste</option>
+                <option value="ZN" id="ZN">Zona Norte</option>
+                <option value="ZS" id="ZS">Zona Sul</option>
+            </optgroup>
+
+
+            <optgroup label="Outros estados">
+                <option value="NE">Nordeste</option>
+                <option value="CO">Centro-Oeste</option>
+                <option value="NO">Norte</option>
+                <option value="SU">Sul</option>
+                <option value="SE">Suldoeste</option>
+
+            </optgroup>
+            </select>
+
+            <legend class="form-role-legend">Qual o seu tipo de rolé favorito?</legend>
+            <div >
+                <div class="form-role"><label for="iar-livre"> Ao ar livre</label> <input type="checkbox" name="ar-livre" id="iar-livre"></div>
+                <div class="form-role"><label for="irestaurantes">Restaurantes e Bares</label> <input type="checkbox" name="restaurantes" id="irestaurantes"></div>
+                <div class="form-role"><label for="ifeiras">Compras/Feirinhas</label> <input type="checkbox" name="feiras" id="ifeiras"></div>
+                <div class="form-role"><label for="ishows">Shows e Música ao vivo</label> <input type="checkbox" name="shows" id="ishows"></div>
+                <div class="form-role"><label for="ifestas">Festas e Baladas</label> <input type="checkbox" name="festas" id="ifestas"></div>
+                <div class="form-role"><label for="ipecas"> Peças</label> <input type="checkbox" name="pecas" id="ipecas"></div>
+                <div class="form-role"><label for="icinema">Cinema</label> <input type="checkbox" name="cinema" id="icinema"></div>
+            </div>
+
+            <legend class="form-din-legend">Quanto você costuma gastar geralmente?</legend> <!-- mudar -->
+
+            <div class="form-din"><label for="inivel4">$$$$ - Sou burguês safado.</label><input type="checkbox" name="nivel4" id="inivel4"></div>
+            <div class="form-din"><label for="inivel3">$$$ - Pode ser bontinho, mas sem ser caro.</label><input type="checkbox" name="nivel3" id="inivel3"></div>
+            <div class="form-din"><label for="inivel2">$$ - Sendo limpo ta bom.</label><input type="checkbox" name="nivel2" id="inivel2"></div>
+            <div class="form-din"><label for="inivel1">$ - Topo qualquer rolé que tem.</label><input type="checkbox" name="nivel1" id="inivel1"></div>
+
+            <legend class="form-regiao-legend">Por qual região você topa sair?</legend> <!-- melhorar -->
+            <div class="form-regiao">
+                <label for="izo">ZO</label>
+                <input type="checkbox" name="zo" id="izo">
+            </div>
+            <div class="form-regiao">
+                <label for="izs">ZS</label>
+                <input type="checkbox" name="zs" id="izs">
+            </div>
+            <div class="form-regiao"><label for="izn">ZN</label><input type="checkbox" name="zn" id="izn"></div>
+            <div class="form-regiao"><label for="icentro">Centro</label> <input type="checkbox" name="centro" id="icentro"></div>
+
+
+            <input class="btn-submit" type="submit" value="Enviar">
+        </form>
+
+        
+    </main>
+
+    <footer>
+        
+        <img src="marca.svg" alt="">
+        <a href="https://github.com/livialeall" target="_blank">Github</a>
+        
+    </footer>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
