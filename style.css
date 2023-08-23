@@ -33,6 +33,7 @@ header {
     background-color: white;
     display: grid;
     grid-template-columns: 4fr 1fr;
+    height: 150px;
     align-items: baseline;
   
 }
@@ -52,6 +53,7 @@ header p {
     margin-left: 10px;
     grid-row: 2;
     grid-column: 1 /-1;
+    z-index: 0;
 
 }
 
@@ -69,9 +71,11 @@ header p {
 
 }
 
+
 /* animações do menu */
 .menu-dropDown {
     display: none;
+    transition: 2s;
     
 }
 
@@ -81,7 +85,23 @@ header p {
     font-family: 'Poppins', sans-serif;
     grid-column: 2 /-1;
     grid-row: 2;
+    z-index: 2;
+    transition: margin-bottom 2s;
+    animation-name: teste;
+    
+}
 
+
+@keyframes teste {
+    from {
+        display: none;
+        animation-duration: 2s;
+    }
+
+    to {
+        display: block;
+        animation-duration: 2s;
+    }
 }
 
 .menu-ativo {
@@ -89,12 +109,15 @@ header p {
     transform: rotate(-45deg); /* melhorar por que nao gira na volta */ 
 }
 
+
 .menu-dropDown-ativo ul {
-    background-color: #AFD2FF;
-    box-shadow: #03030321 0px 1px 5px;
+    background-color: #d0e5ff;
+    box-shadow: #03030343 0px 2px 5px;
     text-align: left;
-
-
+    border-radius: 2px;
+    border: #00224c3a solid 0.5px;
+    
+    
 }
 
 .menu-dropDown-ativo li {
@@ -105,10 +128,25 @@ header p {
     
 }
 
+.menu-dropDown-ativo li a {
+    color: #011F47;
+}
+
+
 .paragrafo-ativo {
-    grid-column: 1/2;
-    display: grid;
+    z-index: 0;
     
+}
+
+/* hover */
+.add-icone:hover,.dark-icone:hover {
+    background-color: #c9cc72ab;
+    border-radius: 50%;
+}
+
+.menu-dropDown-ativo li:hover {
+    background-color: #c9cc72d8;
+    font-weight: 600;
 }
 /* MAIN */
 
@@ -212,9 +250,7 @@ label, legend {
 .form-regiao {
     display: flex;
     align-items: baseline;
-    gap: 5px;
-    
-}
+    gap: 5px;}
 
 .form-din-legend  {
     margin: 25px 0px 0px 0px;
@@ -228,13 +264,17 @@ label, legend {
     margin: 25px 0px 0px 0px;
 }
 .btn-submit {
-    background-color: #3365A6;
+    background-color:#9ea02e;
     color: white;
     padding: 8px 18px;
     margin-top: 25px;
     box-shadow: rgba(0, 0, 0, 0.277) 0px 1px 3px 1px;
 }
 
+.btn-submit:hover {
+    background-color: #b9bb40;
+    
+}
 footer {
     background-color:#4B7DBD;
     margin-top: 35px;
@@ -270,7 +310,7 @@ footer a:hover {
 
 /* ANIMAÇOES COM JAVASCRIPT */
 .ativo {
-    box-shadow: 0px 0px 1px 1.7px #347ad0f5;
+    box-shadow: 0px 0px 1px 1.7px #C3C66C;
     
 }
 
@@ -287,15 +327,17 @@ textarea:focus, input:focus {
     background-color: #00224c;
     border-top: 10px solid #c9cc72;
 
+
 }
 
-.dark-mode-header-on h1,.dark-mode-header-on p,.dark-mode-header-on span,.dark-mode-header-on li {
+.dark-mode-header-on h1,.dark-mode-header-on p,.dark-mode-header-on span,.dark-mode-header-on li{
     color: white;
 }
 
 
 .dark-mode-main-on {
     background-color: #00224c;
+    
 }
 
 .dark-mode-main-on footer {
@@ -309,17 +351,20 @@ textarea:focus, input:focus {
 
 
 .dark-mode-body-on .menu-dropDown-ativo ul {
-    background: #3f6da9;
+    background: #5787c6;
 }
 .dark-mode-main-on .btn-submit {
-    background: #AFD2FF;
+    background: #e4e68b;
     color: #033a7d;
     font-weight: 600;
 
 }
 
+.dark-mode-main-on .btn-submit:hover {
+    background: #f9fac4;
+}
 .dark-mode-body-on {
-    background: #4B7DBD;
+    background: #4776b3;
 }
 
 .dark-mode-body-on footer {
