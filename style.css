@@ -17,7 +17,7 @@ p, legend, label, input {
 }
 
 body {
-    background: #AFD2FF;;
+    background: linear-gradient(324deg, #E5E980 0%, #7EB6FF 100%);
 }
 
 header,main,footer {
@@ -29,12 +29,13 @@ header {
     max-width: 600px;
     border-top: 10px solid #C3C66C;
     padding: 15px;
-    box-shadow: #03030321 0px 1px 5px;
+    box-shadow: #0303032e 0px 3px 5px;
     background-color: white;
     display: grid;
     grid-template-columns: 4fr 1fr;
     height: 150px;
     align-items: baseline;
+    border-radius: 8px;
   
 }
 
@@ -54,6 +55,7 @@ header p {
     grid-row: 2;
     grid-column: 1 /-1;
     z-index: 0;
+    letter-spacing: 0.6px;
 
 }
 
@@ -75,7 +77,6 @@ header p {
 /* animações do menu */
 .menu-dropDown {
     display: none;
-    transition: 2s;
     
 }
 
@@ -87,22 +88,10 @@ header p {
     grid-row: 2;
     z-index: 2;
     transition: margin-bottom 2s;
-    animation-name: teste;
     
 }
 
 
-@keyframes teste {
-    from {
-        display: none;
-        animation-duration: 2s;
-    }
-
-    to {
-        display: block;
-        animation-duration: 2s;
-    }
-}
 
 .menu-ativo {
     transition:transform 1s;
@@ -114,8 +103,8 @@ header p {
     background-color: #d0e5ff;
     box-shadow: #03030343 0px 2px 5px;
     text-align: left;
-    border-radius: 2px;
-    border: #00224c3a solid 0.5px;
+    border-radius: 5px;
+    border: #00224c3f solid 1px;
     
     
 }
@@ -155,7 +144,9 @@ main {
     max-width: 600px;
     padding: 25px;
     background-color: white;
-    box-shadow: #03030321 0px 1px 5px;
+    box-shadow: #0303032e 0px 3px 5px;
+    border-radius: 8px;
+  
     
 }
 
@@ -182,13 +173,15 @@ label, legend {
     padding-bottom: 5px;
 }
 
+/* FORMULARIOS */
+
+/* sexo */
 .form-sexo {
     display: flex;
-    gap: 35px;
+    gap: 5px;
     margin-bottom: 5px;
     padding: 3px;
-  
-    
+    align-items: baseline; 
 }
 
 .form-sexo-conteiner {
@@ -196,79 +189,40 @@ label, legend {
     gap: 10px;
 }
 
-.form-sexo {
-    display: flex;
-    gap: 5px;
-    align-items: baseline;
-    
-}
-
-.form-sexo label {
-    order: 1;
-    color: #00224c;
-    box-shadow:none;
-    font: 0.5em;
-    background-color: none;
-    border: none;
-}
-
-
 .form-sexo div input {
     margin: 0px
 }
 
-.form-role {
+/* demaais forms */
+
+.form-horario-conteiner{
+    margin-top: 25px;
+}
+.form-role,.form-regiao,.form-din,.form-horario {
     display: flex;
     align-items: baseline;
-    gap: 5px;
+    gap: 8px;
     
 }
 
-.form-role-legend{
-    margin-top: 35px;
-}
-
-.form-role label {
+.form-role label,.form-din label,.form-regiao label,.form-sexo label,.form-horario label{
     order: 1;
     font-weight: 500;
 }
 
-.form-din {
-    display: flex;
-    align-items: baseline;
-    gap: 5px;
-    
-}
 
-
-.form-din label {
-    order: 1;
-    font-weight: 500;
-    
-}
-
-.form-regiao {
-    display: flex;
-    align-items: baseline;
-    gap: 5px;}
-
-.form-din-legend  {
+.form-din-legend,.form-regiao-legend,.form-role-legend {
     margin: 25px 0px 0px 0px;
 }
-.form-regiao label {
-    order: 1;
-    font-weight: 500;
-}
 
-.form-regiao-legend {
-    margin: 25px 0px 0px 0px;
-}
+
 .btn-submit {
     background-color:#9ea02e;
     color: white;
     padding: 8px 18px;
     margin-top: 25px;
     box-shadow: rgba(0, 0, 0, 0.277) 0px 1px 3px 1px;
+    border: #9ea02e;
 }
 
 .btn-submit:hover {
@@ -276,12 +230,13 @@ label, legend {
     
 }
 footer {
-    background-color:#4B7DBD;
-    margin-top: 35px;
-    padding: 18px;
+    background-color:#a8aa28;
+    margin-top: 50px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
  
 }
 
@@ -351,20 +306,20 @@ textarea:focus, input:focus {
 
 
 .dark-mode-body-on .menu-dropDown-ativo ul {
-    background: #5787c6;
+    background: #699cde;
 }
 .dark-mode-main-on .btn-submit {
-    background: #e4e68b;
-    color: #033a7d;
+    background: #1654a0;
+    color: white;
     font-weight: 600;
 
 }
 
 .dark-mode-main-on .btn-submit:hover {
-    background: #f9fac4;
+    background: #3476c8;
 }
 .dark-mode-body-on {
-    background: #4776b3;
+    background: linear-gradient(322deg, #548DD7 0%, #013476 99.99%, #004BAD 100%);
 }
 
 .dark-mode-body-on footer {
