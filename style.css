@@ -36,6 +36,7 @@ header {
     height: 150px;
     align-items: baseline;
     border-radius: 8px;
+    position: relative;
   
 }
 
@@ -80,14 +81,19 @@ header p {
     
 }
 
+
 .menu-dropDown-ativo {
     display: block;
     list-style-type: none;
     font-family: 'Poppins', sans-serif;
-    grid-column: 2 /-1;
-    grid-row: 2;
+    /* grid-column: 2 /-1;
+    grid-row: 2; */
     z-index: 2;
     transition: margin-bottom 2s;
+    position: absolute;
+    right: 10px;
+    top:50px;
+   
     
 }
 
@@ -107,6 +113,7 @@ header p {
     border: #00224c3f solid 1px;
     
     
+    
 }
 
 .menu-dropDown-ativo li {
@@ -114,11 +121,16 @@ header p {
     color: #011F47;
     padding:5px;
     font-size: 15px;
+    width: 120px;
+    padding: 10px;
     
 }
 
 .menu-dropDown-ativo li a {
     color: #011F47;
+    
+   
+    
 }
 
 
@@ -215,7 +227,7 @@ label, legend {
     margin: 25px 0px 0px 0px;
 }
 
-
+/* BOTAO SUBMIT */
 .btn-submit {
     background-color:#9ea02e;
     color: white;
@@ -229,6 +241,8 @@ label, legend {
     background-color: #b9bb40;
     
 }
+
+/* RODAPE */
 footer {
     background-color:#a8aa28;
     margin-top: 50px;
@@ -274,7 +288,6 @@ textarea:focus, input:focus {
     outline: none;
 }
 
-/* DROPDOWN */
 
 
 /* DARKMODE */
